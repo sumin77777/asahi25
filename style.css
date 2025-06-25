@@ -234,6 +234,24 @@ p {
     width: 100%;
     height: 150%;
 }
+.read-morebk{
+    text-align: right;
+    font-size: 1.5rem;
+    padding: 2rem;
+    width: 100%;
+    color: #fff;
+    background-color: #000;
+
+}
+.read-morebk2{
+    text-align: right;
+    font-size: 1.5rem;
+    padding: 2rem;
+    width: 100%;
+    color: #fff;
+    background-color:#1b1b1b;
+
+}
 
 /* 
 -----sect2 */
@@ -484,9 +502,163 @@ em {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    justify-content: space-between
+    justify-content: space-between;
+    flex:1
 }
 .sec5-img-box img{
     width: 44%;
 }
 /* 섹션5끝 */
+
+.sect6 {
+    height: 100vh;
+    background: url(images/product-bg3.png) no-repeat center;
+    background-size: 2400px 640px;
+    background-position-Y: 1400px;
+    position: relative;
+    height: 1900px;
+    display: flex;
+    flex-direction: column;
+}
+
+.s6-pro {
+    display: flex;
+    width: 1079px;
+    margin: 100px auto;
+    justify-content: space-around;
+    flex-wrap: wrap
+}
+
+.sect6 h1 {
+    color: #1b1b1b;
+    text-align: center;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin-top: 300px;
+    margin-bottom: 0px;
+}
+
+.sect6 h2 {
+    color: #1b1b1b;
+    text-align: center;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 49px;
+    margin-bottom: 20px;
+}
+
+.sect6 p {
+    color: #1b1b1b;
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 36px;
+}
+
+.battle,
+.can,
+.draft,
+.nama-can {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-end
+}
+
+.nama-can {
+    width: 11%;
+}
+
+/* 섹션6끝 생맥주캔*/
+
+/* 섹션7시작 뉴스 */
+.sect7 {
+    background-color: #1b1b1b;
+    background-position: center;
+    background-size: 100% 100%;
+    margin: auto;
+    position: relative;
+    display: block;
+    align-items: center;
+    height: 1146px;
+    overflow: hidden;
+}
+
+.sect h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: -1.28px;
+    margin-top: 5%;
+}
+
+.sect7 h2 {
+    color: #fff;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 20px;
+}
+
+.sect7 p {
+    color: #fff;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 36px;
+}
+
+.news-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 200px;
+}
+
+.news-l {
+    /* width: 1200px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.news-l img {
+    width: 30%;
+    margin: 30px;
+}
+
+.nl-txt {
+    display: block;
+    width: 593px;
+    margin: 30px;
+}
+
+.news-r {
+    /* width: 1200px; */
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.news-r img {
+    width: 30%;
+    margin-right: 40px;
+    margin: 30px;
+}
+
+.nr-txt {
+    display: block;
+    width: 593px;
+    margin: 30px;
+}

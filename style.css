@@ -1,0 +1,326 @@
+@import url("https://unpkg.com/pretendard@1.3.9/dist/web/static/pretendard.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-decoration: none;
+    list-style: none;
+    display: block;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+:root {
+    font-size: 100%;
+    line-height: 1.6;
+    --blk: #000;
+    --wht: #FFFFFF;
+    --font-shadow: 0 2px 3px rgba(0, 0, 0, .5);
+}
+
+h1 {
+    color: #EFA300;
+    text-align: center;
+    font-size: 5rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: -1.28;
+}
+
+h2 {
+    color: #FFF;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: -0.96;
+}
+
+p {
+    color: #FFF;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.6;
+    letter-spacing: -0.64;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* ------------헤더끝 */
+
+.sect1 {
+    background-image: url(images/main-bg.jpg);
+    max-width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    overflow: hidden;
+    background-position: center;
+
+}
+
+.banner-img {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    margin-top: 5rem;
+    padding: 2rem;
+
+
+}
+
+.sect1 img {
+    display: flex;
+    max-width: 100%;
+    height: 100%;
+    align-items: flex-end;
+    padding: 2rem;
+
+}
+
+/* 
+----------메인배너끝 */
+
+.sect2 {
+    background: linear-gradient(180deg, #000 13.82%, #EFA300 30.11%, #FFF 41.95%, #fff);
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.sect2 img{
+    padding: 2rem;
+}
+
+.pro1-1:hover {
+    transform-origin: center center;
+    transform: scale(1.05);
+    transition: transform 1s ease-in-out;
+}
+
+.pro1-1 {
+    position: static;
+
+    z-index: 500;
+    top: 0%;
+}
+
+.product-bg1 {
+    position: absolute;
+    top: 33%;
+    z-index: -0;
+    max-width: 120%;
+    min-width: 60%;
+
+}
+
+.pro1-1box {
+    position: relative;
+    align-items: center;
+    z-index: 500;
+}
+
+.mid-txt {
+
+    display: flex;
+    z-index: 5;
+    position: absolute;
+    top: 45%;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.mid-txt p {
+    color: #1b1b1b;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+
+}
+
+.mid-tl,
+.mid-tr {
+    text-align: center;
+    padding: 2rem;
+    box-sizing: border-box;
+    width: 18rem;
+    height: 11rem;
+    border-radius: 2rem;
+    background: linear-gradient(180deg, rgba(239, 163, 0, 0.50) 0%, rgba(255, 238, 0, 0.50) 100%);
+    box-shadow: -3px -3px 4px 0px rgba(0, 0, 0, 0.14) inset, 3px 2px 4px 0px rgba(255, 255, 255, 0.60) inset, 10px 14px 26.3px 0px rgba(0, 0, 0, 0.10);
+    backdrop-filter: blur(6.449999809265137px);
+}
+
+.Xbox {
+    height: 25rem;
+}
+
+.Xbox1 {
+    height: 40rem;
+}
+
+.section2-txt{
+    margin: 5rem auto;
+    text-align: center;
+    padding: 2rem;
+}
+
+
+.feature4 {
+    display: flex;
+    flex-wrap: wrap;
+    margin: .8rem;
+    padding: .5rem;
+    justify-content: space-evenly
+}
+
+.feature4 h2 {
+    color: #1b1b1b;
+    text-align: center;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.6;
+    letter-spacing: -0.64px;
+    margin-bottom: 20px;
+}
+
+.feature4 p {
+    color: #1b1b1b;
+    text-align: center;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: -0.64px;
+}
+
+.feature4-1,
+.feature4-2,
+.feature4-3,
+.feature4-4 {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin: 0 2rem;
+}
+
+.feature4-1 img,
+.feature4-2 img,
+.feature4-3 img,
+.feature4-4 img  {
+    width: 20rem;
+    margin-bottom: 2rem;
+
+}
+
+.read-more{
+    text-align: right;
+    font-size: 1.5rem;
+    padding: 1rem;
+    width: 100%;
+    height: 150%;
+}
+/* 
+-----sect2 */
+/* 
+sect3------ */
+
+
+.media {
+    background-color: #1b1b1b;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    margin: auto;
+    position: relative;
+    /* display: block; */
+    justify-content: center;
+    height: 100%;
+    overflow: hidden;
+}
+
+.media h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: -1.28px;
+    margin-top: 5%;
+}
+
+p {
+    color: #FFF;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: -0.96px;
+}
+
+em {
+    text-decoration: none;
+    color: #FFF;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 49px;
+    letter-spacing: -0.64px;
+}
+
+.media {
+    top: 30px;
+    height: 100%;
+    padding-bottom: 10rem;
+}
+
+.youtube1 {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    /* 16:9 비율 */
+    height: 0;
+    overflow: hidden;
+}
+
+.youtube1 iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+

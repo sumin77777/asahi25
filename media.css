@@ -1,0 +1,257 @@
+/* media.css: Detailed & Refined Responsive Media Queries (karaguchi.png size fix) */
+
+/* 1440px 이하 */
+@media (max-width: 1440px) {
+  :root { font-size: 100%; }
+}
+
+/* 1200px 이하 */
+@media (max-width: 1200px) {
+  :root { font-size: 98%; }
+
+  /* --- Font Size Adjustments --- */
+  .sect2 p                   { font-size: 1.75rem; }
+  .mid-txt p                 { font-size: 0.875rem; }
+  .feature4 h2, .feature4 p  { font-size: 1.5rem; }
+  .sect4 .sec2-top h1        { font-size: 3.5rem; }
+  .sect4 .sec2-top h2        { font-size: 2.5rem; }
+  .sect4 .sec2-top p         { font-size: 1.0625rem; }
+  .sect4 .mid2-txt h2        { font-size: 1.875rem; }
+  .sect4 .mid2-txt p         { font-size: 0.9375rem; }
+  .media h1                  { font-size: 3rem; }
+  .sec5-txt-box h1           { font-size: 2.75rem; }
+  .sec5-txt-box p            { font-size: 1.125rem; }
+  .sect6 h1                  { font-size: 3rem; }
+  .sect6 h2                  { font-size: 2rem; }
+  .sect6 p                   { font-size: 1rem; }
+  .sect7 h1                  { font-size: 2.75rem; }
+  .sect7 h2                  { font-size: 1.75rem; }
+  .sect7 p                   { font-size: 0.875rem; }
+}
+
+/* 992px 이하 */
+@media (max-width: 992px) {
+  :root { font-size: 95%; }
+
+  /* --- General Spacing --- */
+  .section2-txt { margin: 3rem auto; }
+
+  /* --- Layout Adjustments --- */
+  .mid2-txt { justify-content: center; gap: 1.5rem; }
+  .feature4-1, .feature4-2,
+  .feature4-3, .feature4-4 { flex: 1 1 45%; }
+  .mid-t1, .mid-t2,
+  .mid-t3, .mid-t4,
+  .mid-t5                { flex: 1 1 45%; }
+  .news-l, .news-r {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+  .nl-txt, .nr-txt {
+      width: 90%;
+      margin: 1rem 0;
+  }
+  .news-l img, .news-r img {
+      width: 80%;
+      margin: 1rem 0;
+  }
+  
+  /* --- Element Sizing --- */
+  .s6-pro { width: 90%; }
+}
+
+/* 768px 이하 */
+@media (max-width: 768px) {
+  :root { font-size: 90%; }
+
+  /* --- General Layout & Spacing --- */
+  h1 { font-size: 3.5rem; }
+  .Xbox { height: 5rem; }
+  .Xbox2 { height: auto; padding-top: 2rem; } 
+  
+  /* --- Section-specific Layouts --- */
+  .feature4, .mid2-txt, .sec5-img-box, .s6-pro, .news-box {
+      flex-direction: column;
+      align-items: center;
+  }
+  .feature4-1, .feature4-2, .feature4-3, .feature4-4,
+  .mid-t1, .mid-t2, .mid-t3, .mid-t4, .mid-t5 {
+      flex: 1 1 80%;
+      margin-bottom: 2rem;
+  }
+  .mid-txt {
+      position: static;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 2rem;
+      gap: 1rem;
+  }
+  .s6-pro { width: 100%; }
+
+  /* 높이가 고정된 섹션들을 auto로 변경 */
+  .sect5, .sect6, .sect7 {
+      height: auto;
+      padding: 5rem 0;
+  }
+  
+  /* sect6 모바일 배경 위치 수정 */
+  .sect6 {
+      background-position-Y: 1790px;
+  }
+  
+  .sect6 h1 { margin-top: 0; }
+  .news-box { margin-top: 2rem; }
+
+
+  /* --- Hide/Show Elements --- */
+  .product-bg1, .product-bg2 { display: none; }
+
+  /* --- Element Sizing & Positioning --- */
+  .pro2-1 {
+      position: static; 
+      animation: bounce-ball-mobile 2s linear infinite;
+      width: 80%;
+      max-width: 400px;
+  }
+  .namacan { max-width: 100%; width: 400px; }
+  .sec5-img-box img { width: 80%; max-width: 450px; margin-bottom: 2rem; }
+  .sec5-txt-box { text-align: center; }
+  .sec5-txt-box h1, .sec5-txt-box p { text-align: center; }
+
+  /* --- Footer --- */
+  footer {
+      height: auto;
+      padding: 40px 20px;
+  }
+  .ft-box {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+  }
+  .bt-txtbox1, .bt-txtbox2 {
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      gap: 15px;
+  }
+  .bt-txt3 {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+      gap: 15px;
+  }
+}
+
+/* 576px 이하 */
+@media (max-width: 576px) {
+  :root { font-size: 85%; }
+
+  h1 { font-size: 3rem; }
+  h2 { font-size: 2rem; }
+
+  /* --- Layout Adjustments --- */
+  .banner-img {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+  }
+  .banner-img .banner-txt {
+      max-width: 80%;
+  }
+
+  /* --- Spacing --- */
+  .sect2 { padding-top: 3rem; }
+  .section2-txt { padding: 0 1rem; margin: 2rem auto; }
+}
+
+/* 375px 이하 - 최종 타겟 */
+@media (max-width: 375px) {
+  :root { font-size: 78%; }
+
+  /* --- General Typography --- */
+  h1 { font-size: 2.5rem; letter-spacing: -0.5px; }
+  h2 { font-size: 1.8rem; }
+  p { font-size: 1.1rem; }
+
+  /* --- Header & Main Layout --- */
+  .inner { padding-left: 1rem; padding-right: 1rem; }
+  .logo img { margin-left: 10px; }
+
+  /* --- Section 1: Banner --- */
+  .sect1 { background-image: none; background-color: #111; }
+  .banner-img { padding: 1rem; margin-top: 2rem; }
+  .banner-img .mug-sp { display: none; }
+
+  /* --- Section 2: Super Dry Intro --- */
+  .sect2 h1 { font-size: 2rem; }
+  .sect2 .karaguchi{
+      width: 60%;
+      max-width: 200px; /* 250px에서 220px으로 수정 */
+  }
+  .pro1-1 { max-width: 400px; }
+  .mid-tl, .mid-tr { width: 90%; }
+  .section2-txt { font-size: 1rem; line-height: 1.6; }
+  .feature4-1 img, .feature4-2 img, .feature4-3 img, .feature4-4 img { width: 12rem; }
+  .feature4 h2 { font-size: 1.5rem; }
+  .feature4 p { font-size: 1rem; }
+  .mid-txt p { font-size: 1rem; }
+
+
+  /* --- Section 4: Nama-can --- */
+  .sect4 .sec2-top h1 { font-size: 2.2rem; }
+  .sect4 .sec2-top h2 { font-size: 1.8rem; }
+  .sect4 .sec2-top p { font-size: 1.1rem; }
+  .mid-t1, .mid-t2, .mid-t3, .mid-t4, .mid-t5 { width: 90%; height: auto; }
+  .mid2-txt p { font-size: 1rem; }
+  .namacan { width: 80%; }
+  
+  /* --- Section 5: Drinking Tip --- */
+  .sect5 { padding: 3rem 0; } /* 패딩 조정 */
+  .sec5-txt-box h1 { font-size: 1.5rem; }
+  .sec5-txt-box p { font-size: 1rem; }
+
+  /* --- Section 6: Products --- */
+  .sect6 { padding-top: 3rem; }
+  .sect6 p { font-size: 1rem; }
+  .s6-pro { gap: 3rem; }
+  .s6-pro img { width: 60%; margin: 0 auto; }
+  
+  /* --- Section 7: News --- */
+  .sect7 h2 { font-size: 1.5rem; }
+  .sect7 p { font-size: 1rem; }
+  .nl-txt, .nr-txt { padding: 0 1rem; }
+
+  /* --- Read More Links --- */
+  .read-more, .read-morebk, .read-morebk2 {
+      padding: 1.5rem 1rem;
+      font-size: 1.2rem;
+      text-align: center;
+  }
+  .read-more a, .read-morebk a, .read-morebk2 a {
+      width: 100%;
+      display: block;
+  }
+
+  /* --- Footer --- */
+  .bt-txtbox1 p { font-size: 14px; line-height: 1.5; }
+  .bt-txt3 a { font-size: 15px; }
+}
+
+/* 모바일용 애니메이션 정의 */
+@keyframes bounce-ball-mobile {
+    0% {
+        transform: translateY(0);
+    }
+    35% {
+        transform: translateY(15px);
+        animation-timing-function: ease-in-out;
+    }
+    100% {
+        transform: translateY(0);
+        animation-timing-function: ease-in-out;
+    }
+}

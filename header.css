@@ -1,5 +1,4 @@
 header {
-
     color: #fff;
     font-family: Pretendard;
     font-size: 18px;
@@ -9,12 +8,16 @@ header {
     background-color: #1b1b1b;
     z-index: 1100;
     height: 77px;
-position: relative;
+    position: sticky; /* 상단에 고정되도록 sticky로 변경 */
+    top: 0;
 }
 
-.inner {
-    margin: auto;
-    
+header .inner {
+    display: flex;
+    justify-content: space-between; /* 로고와 메뉴를 양쪽 끝으로 */
+    align-items: center;
+    width: 100%;
+    padding: 0 2rem; /* 좌우 여백 */
 }
 
 .logo {
@@ -26,19 +29,16 @@ position: relative;
 
 .logo img {
     height: 50px;
-    margin-left: 70px;
-
-
+    margin-left: 0; /* media query에서 조정되므로 초기화 */
 }
 
-header .inner {
+nav {
     display: flex;
-
+    align-items: center;
 }
 
 .menu {
     display: flex;
-
 }
 
 .menu li {
@@ -47,6 +47,7 @@ header .inner {
     left: 0;
     margin-right: 20px;
     text-align: center;
+    position: relative;
 }
 
 .menu a {
@@ -57,13 +58,18 @@ header .inner {
 .s-menu {
     background-color: #1b1b1b;
     opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
     z-index: 1100;
+    transition: opacity 0.3s, visibility 0.3s;
 }
 
 .menu>li:hover .s-menu {
     opacity: 1;
-    transition: 0.5s;
-    z-index: 1100;
+    visibility: visible;
 }
 
 .mobile-menu-toggle {
@@ -72,4 +78,85 @@ header .inner {
     background: none;
     border: none;
     cursor: pointer;
-  }
+    padding: 0;
+}
+.mobile-menu-toggle img {
+    width: 32px;
+    height: 32px;
+    
+}
+
+/* ======================================== */
+/* 모바일 반응형 스타일            */
+/* ======================================== */
+
+@media (max-width: 768px) {
+    header .inner {
+        padding: 0 1rem;
+    }
+
+    .logo img {
+        margin-left: 0;
+    }
+
+    /* 1. 모바일 메뉴 패널로 스타일 변경 */
+    .menu {
+        position: fixed;
+        top: 0;
+        right: -100%; /* 시작 위치: 화면 오른쪽 밖 */
+        width: 60%;   /* 화면 너비의 60% 차지 */
+        max-width: 300px;
+        height: 100vh;
+        background-color: #1b1b1b;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 80px;
+        transition: right 0.4s ease-in-out;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+    }
+
+    /* 2. active 클래스가 붙으면 메뉴 보이기 */
+    .menu.active {
+        right: 0; /* 최종 위치: 화면 오른쪽 끝 */
+    }
+    
+    /* 3. 모바일 메뉴 내부 항목 스타일 조정 */
+    .menu li {
+        display: block;
+        width: 100%;
+        line-height: normal;
+        text-align: left;
+        margin-right: 0;
+    }
+
+    .menu li a {
+        padding: 15px 25px;
+        border-bottom: 1px solid #333;
+    }
+
+    /* 4. 모바일 서브메뉴 스타일 조정 */
+    .s-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        background-color: #2c2c2c;
+        display: none; /* 기본적으로 숨김, 필요시 JS로 제어 */
+    }
+
+    /* 모바일에서는 호버 대신 클릭으로 서브메뉴를 여는 것이 일반적입니다. */
+    /* 간단한 표시를 위해 호버 유지 */
+    .menu > li:hover .s-menu {
+        display: block;
+    }
+    
+    .s-menu a {
+        padding-left: 40px;
+        font-size: 0.9em;
+        color: #ccc;
+    }
+
+    /* 5. 햄버거 버튼 보이기 */
+    .mobile-menu-toggle {
+        display: block;
+    }
+}

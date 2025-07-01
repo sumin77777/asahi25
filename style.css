@@ -292,7 +292,8 @@ sect3------ */
     overflow: hidden;
 }
 
-.media h1 {
+.media h1,
+.sect7 h1 {
     color: #fff;
     text-align: center;
     font-size: 42px;

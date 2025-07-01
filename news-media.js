@@ -26,27 +26,30 @@ $(document).ready(function () {
         loop: true,
 
         breakpoints: {
-            430: {      
-              slidesPerView: 2,
-              spaceBetween: 10,
-            },
-            1200: {     
-                slidesPerView: 2,
-                spaceBetween: 10,
-              },
-            1920: {     
-              slidesPerView: 3,
-              spaceBetween: 10,
-            }
-          }
-        });
+        0: {        // 모바일
+            slidesPerView: 1,
+            spaceBetween: 10,
+        },
+        430: {      // 태블릿
+            slidesPerView: 2,
+            spaceBetween: 10,
+        },
+        1200: {     // 노트북
+            slidesPerView: 2,
+            spaceBetween: 10,
+        },
+        1920: {     // PC/와이드
+            slidesPerView: 3,
+            spaceBetween: 10,
+        }
   
-
-    $(document).on('click', '.custom-bullet', function () {
-        const index = $(this).data('index');
-        swiper.slideToLoop(index - 1); 
-    });
+    }
+   
     
 });
-        
+     $(document).on('click', '.custom-bullet', function () {
+        const index = $(this).data('index');
+        swiper.slideToLoop(index - 1); 
+    }); 
+})
 

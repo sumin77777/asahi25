@@ -1,8 +1,10 @@
 
+
 footer {
-    height: 450px;
+    height: 650px;
     background-color: #1b1b1b;
     display: flex;
+    width: 100%;
 }
 
 .bt-logo {
@@ -33,9 +35,13 @@ footer p {
     align-items: center;
     justify-content: center;
 }
+.bt-txtbox1{
+    display: flex;
+    gap: 30px;
+}
 
 .bt-txt1 {
-    margin-right: 30px;
+  
     align-items: center;
 }
 
@@ -76,3 +82,41 @@ footer p {
     align-items: center;
 }
 
+
+@media (max-width: 768px){
+    footer {
+    height: auto;
+    padding: 20px;
+  }
+
+  .ft-box {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .bt-txtbox1 {
+    margin-right: 0;
+    justify-content: flex-start;
+    text-align: left;
+    display: flex;
+  }
+
+  .bt-txtbox2 {
+    margin-right: 0;
+    text-align: left;
+    justify-content: flex-start;
+  }
+
+  .bt-txt3 {
+    margin-right: 153px;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+    display: flex;
+  }
+  .bt-txt2{
+    display: flex;
+    padding-right: 48px;
+  }
+}
